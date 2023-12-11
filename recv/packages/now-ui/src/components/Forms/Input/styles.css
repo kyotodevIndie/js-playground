@@ -1,0 +1,87 @@
+.bordered {
+  @apply text-slate-800 border border-slate-300 bg-base-00 rounded-md border-solid;
+}
+.bordered:hover {
+  @apply border-slate-500;
+}
+.bordered:focus {
+  @apply border-slate-500;
+}
+.bordered:active {
+  @apply border-slate-500;
+}
+.bordered:disabled {
+  @apply border-slate-200;
+}
+.bordered input {
+  @apply outline-none;
+}
+
+.filled {
+  @apply text-slate-800 border-b border-solid border-b-slate-300 bg-slate-25;
+}
+.filled input {
+  @apply bg-slate-25 outline-none;
+}
+.filled:hover {
+  @apply border-b-slate-500;
+}
+.filled:focus {
+  @apply bg-base-00 border-b-slate-500;
+}
+.filled:active {
+  @apply bg-base-00 border-b-slate-500;
+}
+.filled:active input {
+  @apply bg-base-00;
+}
+.filled:disabled {
+  @apply bg-slate-25 border-b-slate-200;
+}
+.filled:disabled input {
+  @apply bg-slate-25;
+}
+
+.bordered_Error {
+  @apply text-error-600 border border-solid border-error-200 bg-error-25 rounded-md;
+}
+.bordered_Error:hover {
+  @apply border-error-100;
+}
+.bordered_Error:focus {
+  @apply border-error-200;
+}
+.bordered_Error:active {
+  @apply border-error-200;
+}
+.bordered_Error:disabled {
+  @apply border-error-200;
+}
+.bordered_Error input {
+  @apply bg-error-25 outline-none;
+}
+.bordered_Error input::placeholder {
+  @apply text-error-600;
+}
+
+.filled_Error {
+  @apply text-error-600 border-b border-solid border-b-error-300 bg-error-25;
+}
+.filled_Error:hover {
+  @apply border-error-200;
+}
+.filled_Error:focus {
+  @apply bg-error-25 border-b-error-300;
+}
+.filled_Error:active {
+  @apply bg-error-25 border-b-error-300;
+}
+.filled_Error:disabled {
+  @apply bg-error-25 border-b-error-200;
+}
+.filled_Error input {
+  @apply bg-error-25 outline-none;
+}
+.filled_Error input::placeholder {
+  @apply text-error-600;
+}

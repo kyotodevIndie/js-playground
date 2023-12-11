@@ -1,0 +1,234 @@
+
+post /login
+role admin | seller
+
+{
+  email: string
+  password: string
+}
+
+
+get /user
+role admin | seller
+
+{
+name: string
+email: string
+currentGoal: number           //Quanto da meta ja foi alcançada
+finalGoal: number             //Meta final
+role: string | string[]    //tipo de usuario (não sei se vai ser um array com os tipos ou se vai er um tipo definitvo)
+}
+
+get /users/status={deleted}
+role admin
+
+{
+  users: [               //Array de usuarios para tabela de usuarios   
+  {
+    userId: string
+    profilePic: string
+    email: string
+    name: string
+    cpf: string
+    status: string
+    createdAt: date
+  },
+  [...]
+]
+}
+
+put /users/{id}
+role admin
+
+
+{
+  profilePic?: string
+  email?: string
+  name?: string
+  cpf?: string
+  status?: string
+  password?: string
+}
+
+post /users/create
+role admin
+
+
+{
+  profilePic: string
+  email: string
+  name: string
+  cpf: string
+  status: string
+  password: string
+}
+
+delete /users/delete/{id}
+role admin 
+
+{}
+
+
+get /generalResults
+role admin 
+
+{
+convertedValue: number        // Valor convertido
+conversionRateFailure: number // Taxa de Conversão - Pagos/Total de Falhas
+conversionRateSend: number    // Taxa de Conversão - Pagos/Enviados
+totalCartsSent: number        // Total de Carrinhos Enviados
+totalCartsPaid: number        // Total de Carrinhos Pagos
+tme: number                   // TME - Ticket médio carrinho enviado
+tmp: number                   // TMP - Ticket médio carrinho pago
+Attendances: number           // Atendimentos
+Finalized: number             // Finalizados
+whatsApp: number              // Em Whatsapp
+queue: number                 // Em Fila
+recentOrders: [               //Array de objetos para tabela de pedidos   
+  {
+    userId: string
+    profilePic: string
+    name: string
+    user: string
+    orderId: string
+    orderValue: number
+    chargeValue: number
+    status: string
+    paymentMethod: string
+    createdAt: date
+  },
+  [...]
+]
+}
+
+get /configs 
+role admin
+
+{
+  overallGoal: number           //Meta geral
+  MonthlyIndividualGoal: number //Meta geral individual mensal
+  individualGoals: [            //Array para table de configs
+    {
+      userId: string
+      name: string
+      individualGoal: number,
+    },
+    [...]
+  ]
+}
+
+post /configs/goal
+role admin
+
+{
+  overallGoal?: number
+  MonthlyIndividualGoal?: number
+}
+
+put /configs/individualGoal/{userId}
+role admin
+
+{
+  individualGoal: number
+}
+
+get /administrative/date={date}&&seller={seller}&&paymentMethod={paymentMethod}&&team={team}&&status={status}
+role admin
+
+{
+sellers: [                  //Array de objetos para tabela de vendedores   
+  {
+    userId: string
+    profilePic: string
+    name: string
+    user: string
+    sendCurrency: number      //valor da quantidade enviados   
+    sendNumber: number        //numero da quantidade enviados   
+    paymentCurrency: number   //valor dos pagos   
+    paymentNumber: number     //numero de pagos   
+    tme: number                  
+    tmp: number                  
+    convertionNumber: ???     //é uma tabela, so jesus sabe como q são esses dados q deveriam vir kkkk   
+    convertionCurrency: ???   //é uma tabela, so jesus sabe como q são esses dados q deveriam vir kkkk    
+  },
+  [...]
+]
+}
+
+get /services/date={date}&&paymentMethod={paymentMethod}&&status={status}&&brand={brand}
+role admin | seller
+
+{
+sellers: [                  //Array de objetos para tabela de Atendimentos   
+  {
+    userId: string
+    profilePic: string
+    name: string
+    user: string
+    orderId: number      
+    orderCode: number         
+    client: string   
+    orderValue: number   
+    brand: string                  
+    createdAt: date                  
+    status: string    
+  },
+  [...]
+]
+}
+
+
+
+get /services/{orderId}
+role admin | seller
+
+{
+  attendenceAt
+  userId: string
+  profilePic: string
+  name: string
+  user: string
+  orderId: number      
+  orderCode: number         
+  client: string   
+  orderValue: number   
+  brand: string                  
+  createdAt: date                  
+  status: string
+
+  //order data
+  charge
+  document
+  email
+  phoneNumber
+  createdAt 
+  updatedAt
+
+  // payment data
+  cardBrand
+  cardNumber
+  cardName
+  cardExpiration
+  cardInstallments
+  chargeAddress
+
+  // historic data
+  status
+  notAuthorized
+  adquirente
+  tid
+  adquirenteMessage
+  nsu
+  adquirenteCodigoRetorno
+  autorizationCode
+  products [
+    {
+      productNumber
+      productName
+      productQuantity
+      productPrice
+      productStatus?
+    },
+    [...]
+  ]
+},

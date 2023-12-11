@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>DoomFire</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- minify -->
+<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>DoomFire</h1>
+    <div id="fireCanvas"></div>
+    <div class="margin">
+      <button type="button" class="nes-btn" onclick="decreaseFireSource()">-</button>
+      <button type="button" class="nes-btn" onclick="destroyFireSource()">Min Fire</button>
+      <button type="button" class="nes-btn" onclick="createFireSource()">Max Fire</button>
+      <button type="button" class="nes-btn" onclick="increaseFireSource()">+</button>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

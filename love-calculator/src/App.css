@@ -1,0 +1,250 @@
+html {
+  font-family: "Press Start 2P", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  padding-top: 20px;
+  font-size: 20px;
+}
+label,
+button {
+  font-size: 14px;
+}
+
+.App {
+  color: #fff;
+  background-color: black;
+  text-align: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30vh;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.img {
+  margin: 0px 30px 0px;
+}
+
+.btn {
+  margin-top: 40px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.loading {
+  margin-top: 10vh;
+  width: 300px;
+}
+
+.result {
+  margin-top: 20vh;
+}
+
+.shine1 {
+  position: absolute;
+  left: 550px;
+  top: 150px;
+  width: 50px;
+  transform: rotate(0deg);
+}
+.shine2 {
+  position: absolute;
+  right: 550px;
+  top: 250px;
+  width: 50px;
+  transform: rotate(90deg);
+}
+.shine3 {
+  position: absolute;
+  left: 570px;
+  top: 400px;
+  width: 50px;
+  transform: rotate(180deg);
+}
+.shine4 {
+  position: absolute;
+  right: 570px;
+  top: 500px;
+  width: 50px;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 330px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+  }
+  .img {
+    margin: 15px 30px 15px;
+  }
+  .shine1 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 50px;
+    transform: rotate(0deg);
+  }
+  .shine2 {
+    position: absolute;
+    right: 30px;
+    top: 250px;
+    width: 50px;
+    transform: rotate(90deg);
+  }
+  .shine3 {
+    position: absolute;
+    left: 40px;
+    top: 480px;
+    width: 50px;
+    transform: rotate(180deg);
+  }
+  .shine4 {
+    position: absolute;
+    right: 70px;
+    top: 460px;
+    width: 50px;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 20px 0px 20px;
+    align-items: center;
+  }
+  .img {
+    margin: 15px 30px 15px;
+  }
+  .shine1 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 50px;
+    transform: rotate(0deg);
+  }
+  .shine2 {
+    position: absolute;
+    right: 30px;
+    top: 250px;
+    width: 50px;
+    transform: rotate(90deg);
+  }
+  .shine3 {
+    position: absolute;
+    left: 40px;
+    top: 480px;
+    width: 50px;
+    transform: rotate(180deg);
+  }
+  .shine4 {
+    position: absolute;
+    right: 70px;
+    top: 460px;
+    width: 50px;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 50px 0px 50px;
+  }
+  .img {
+    margin: 15px 30px 15px;
+  }
+  .shine1 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 50px;
+    transform: rotate(0deg);
+  }
+  .shine2 {
+    position: absolute;
+    right: 30px;
+    top: 250px;
+    width: 50px;
+    transform: rotate(90deg);
+  }
+  .shine3 {
+    position: absolute;
+    left: 40px;
+    top: 480px;
+    width: 50px;
+    transform: rotate(180deg);
+  }
+  .shine4 {
+    position: absolute;
+    right: 70px;
+    top: 460px;
+    width: 50px;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 800) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 50px 0px 50px;
+  }
+  .img {
+    margin: 15px 30px 15px;
+  }
+  .shine1 {
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    width: 50px;
+    transform: rotate(0deg);
+  }
+  .shine2 {
+    position: absolute;
+    right: 30px;
+    top: 250px;
+    width: 50px;
+    transform: rotate(90deg);
+  }
+  .shine3 {
+    position: absolute;
+    left: 40px;
+    top: 480px;
+    width: 50px;
+    transform: rotate(180deg);
+  }
+  .shine4 {
+    position: absolute;
+    right: 70px;
+    top: 460px;
+    width: 50px;
+    transform: rotate(-90deg);
+  }
+}
